@@ -1,5 +1,0 @@
-Add comments
-
-Game to diff files
-
-How to upload in git 

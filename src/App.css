@@ -118,8 +118,8 @@
 .rulesComponent > .rulesPopUp {
   position: fixed;
   top: 5%;
-  left: calc(50% - 300px);
-  width: 600px;
+  left: calc(50% - 225px);
+  width: 450px;
   margin: 0 auto;
   z-index: 999;
   border: 3px solid white;
