@@ -11,12 +11,12 @@ class AlertComponent extends Component{
   
     //handle how to show elements
     componentDidMount(){
-      TweenMax.to(this.container, 1, {opacity: 1, top: 10 });
+      TweenMax.to(this.container, .5, {opacity: 1, top: 10 });
     }
   
     //handle hide
     hideContainer(){
-      TweenMax.to(this.container, 1, {opacity: 0, top: -200, onComplete: () => {
+      TweenMax.to(this.container, .5, {opacity: 0, top: -200, onComplete: () => {
         if(this.props.handleClick){
           this.props.handleClick(); 
         }

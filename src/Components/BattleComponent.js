@@ -55,20 +55,20 @@ const BattleComponent = (props) => {
       let counter = valueFromCount;
 
       //move img1 to right position
-      TweenMax.to(elements.img1, 1, {top:0, left: 0, opacity: 1, onComplete: () => {
+      TweenMax.to(elements.img1, .5, {top:0, left: 0, opacity: 1, onComplete: () => {
 
         //show vertical line
-        TweenMax.to(elements.vl, .5, {opacity: 1, onComplete: ()=>{
+        TweenMax.to(elements.vl, .3, {opacity: 1, onComplete: ()=>{
 
           const tl = new TimelineLite({repeat: valueFromCount, repeatDelay: 0.1, onComplete: () => {
             //show img2
-            TweenMax.to(elements.img2, .5, {opacity:1});
+            TweenMax.to(elements.img2, .3, {opacity:1});
             checkWhoWin(props.lastChoice, props.randomChoice);
           }});
 
           //animation for counter
-          tl.to(elements.count, .5, {scale:1, opacity:1});
-          tl.to(elements.count, .5, {scale:0.7, opacity:0, onComplete: () => {
+          tl.to(elements.count, .25, {scale:1, opacity:1});
+          tl.to(elements.count, .25, {scale:0.7, opacity:0, onComplete: () => {
             counter--;
             elements.count.textContent = counter;
           }});
