@@ -1,0 +1,220 @@
+.header{
+  color: #fff;
+  font-family: 'Goldman', cursive;
+  text-align: center;
+  font-size: 2em;
+}
+
+.gameGrid{
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.gameGrid > img {
+  margin: 5px;
+  position: relative;
+  opacity: 0.6;
+}
+
+.alert{
+  position: relative;
+  width: 500px;
+  margin: auto;
+  border: #fff 2px solid;
+  text-align: center;
+  padding: 20px 40px;
+  opacity: 0;
+  top: -200px;
+  background-color: #2874A6;
+}
+
+.alert > .textAlert{
+  color: #fff;
+  font-family: 'Goldman', cursive;
+  font-size: 30px;
+  letter-spacing: 5px;
+  padding-bottom: 10px;
+}
+
+.alert > button {
+  color: #fff;
+  font-family: 'Goldman', cursive;
+  text-align: center;
+  border: #fff 2px solid;
+  background-color: #2874A6;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+}
+
+.alert > button:hover {
+  color: #2874A6;
+  border: #2874A6 2px solid;
+  background-color: #fff;
+}
+
+.battleComponent{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.battleComponent > .firstElement {
+  position: relative;
+}
+
+.battleComponent > .verticalLine {
+  border: 2px solid #fff;
+  margin: 0px 15px;
+  display: inline;
+}
+
+.battleComponent > .countStart{
+  position: absolute;
+  left: 52%;
+  color: rgb(255, 255, 255);
+  font-size: 110px;
+  font-family: 'Goldman', cursive;
+  z-index: 1;
+  transform: scale(0.7);
+  opacity: 0;
+  text-align: center;
+  width: 130px;
+}
+
+.pointsComponent {
+  display: flex;
+  color: white;
+  text-align: center;
+  justify-content: space-around;
+  width: 600px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.pointsComponent .pointsTitle{
+  letter-spacing: 2px;
+  font-size: 1em;
+}
+
+.pointsComponent .points{
+  font-size: 50px;
+}
+
+.rulesComponent > .rulesIcon {
+  font-size: 2em;
+  color: #fff;
+  position: fixed;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 3px 9px;
+  cursor: pointer;
+}
+
+.rulesComponent > .rulesPopUp {
+  position: fixed;
+  top: 5%;
+  left: calc(50% - 300px);
+  width: 600px;
+  margin: 0 auto;
+  z-index: 999;
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: #2874A6;
+  opacity: 0;
+  display: none;
+  text-align: center;
+}
+.rulesComponent > .rulesPopUp >.title{
+  color: #fff;
+  font-family: 'Goldman', cursive;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.rulesComponent > .rulesPopUp > img{
+  width: 100%;
+}
+
+.rulesComponent > .rulesPopUp > .btn-close {
+  display: inline-block;
+  color: #fff;
+  font-size: 50px;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 2px 15px;
+  margin: 10px;
+  transition: transform 0.5s, color 0.5s, border-color 0.5s;
+  cursor: pointer;
+}
+
+.rulesComponent > .rulesPopUp > .btn-close:hover{
+  color: #000;
+  border-color: #000;
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px){
+  .rulesComponent > .rulesPopUp{
+    width: 90vw;
+    left: calc(5vw);
+  }
+  .rulesComponent > .rulesPopUp > .btn-close{
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 769px){
+  .alert{
+    width: 70%;
+    padding: 10px 20px;
+  }
+  .gameGrid{
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .gameGrid > img{
+    flex-basis: 30%;
+  }
+  .pointsComponent{
+    width: 80%;
+  }
+  .pointsComponent .points{
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 522px){
+  .header{
+    font-size: 1.8em;
+  }
+  .alert{
+    width: 70%;
+    padding: 10px 20px;
+  }
+  .gameGrid{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .gameGrid > img{
+    width: 150px;
+  }
+  .battleComponent > img {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 449px){
+  .gameGrid > img{
+    width: 120px;
+  }
+  .battleComponent > img {
+    width: 120px;
+  }
+}
